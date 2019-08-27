@@ -13,3 +13,4 @@ var playerScore = 0;
 // when the playerScore matches the initial score, player wins
 // if player score goes over initialScore, player loses
 // when the game is won or loss have a reset to generate a new initialScore and set the playerScore back to 0 WITHOUT changed the wins or losses 
+
