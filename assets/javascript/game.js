@@ -9,28 +9,71 @@ $(document).ready(function () {
     var playerScore = 0;
     
     //test idea
-    var purple = Math.floor((Math.random() * 12) + 1);
-    console.log('this is purple' + purple);
-    //var blue = Math.floor((Math.random() * (12 - 1)) + 1);
-    //console.log('this is blue' + blue);
-    var red = Math.floor((Math.random() * (12)) + 1);
-    console.log('this is red' + red);
-    var orange = Math.floor((Math.random() * (12)) + 1);
-    console.log('this is orange' + orange);
-    var green = Math.floor((Math.random() * (12)) + 1);
-    console.log('this is green' + green);
-    var yellow = Math.floor((Math.random() * (12)) + 1);
-    console.log('this is yellow' + yellow);
+    // var purple = Math.floor((Math.random() * 12) + 1);
+    // console.log('this is purple' + purple);
+    // //var blue = Math.floor((Math.random() * (12 - 1)) + 1);
+    // //console.log('this is blue' + blue);
+    // var red = Math.floor((Math.random() * 12) + 1);
+    // console.log('this is red' + red);
+    // var orange = Math.floor((Math.random() * 12) + 1);
+    // console.log('this is orange' + orange);
+    // var green = Math.floor((Math.random() * 12) + 1);
+    // console.log('this is green' + green);
+    // var yellow = Math.floor((Math.random() * 12) + 1);
+    // console.log('this is yellow' + yellow);
     
     
 
-    initialScore = Math.floor((Math.random() * (120 - 19)) + 19);
+    // initialScore = Math.floor((Math.random() * (120 - 19)) + 19);
     
+
+    function restart() {
+
+        var purple = Math.floor((Math.random() * 12) + 1);
+        console.log('this is purple' + purple);
+        //var blue = Math.floor((Math.random() * (12 - 1)) + 1);
+        //console.log('this is blue' + blue);
+        var red = Math.floor((Math.random() * 12) + 1);
+        console.log('this is red' + red);
+        var orange = Math.floor((Math.random() * 12) + 1);
+        console.log('this is orange' + orange);
+        var green = Math.floor((Math.random() * 12) + 1);
+        console.log('this is green' + green);
+        var yellow = Math.floor((Math.random() * 12) + 1);
+        console.log('this is yellow' + yellow);
+    
+    
+
+        initialScore = Math.floor((Math.random() * (120 - 19)) + 19);
+
+
+        $("#target-number").html(initialScore);
+        playerScore == 0;
+
+    }
+
+
 
     function start() {
-        //initialScore = Math.floor(Math.random() * 120);
+        
+        var purple = Math.floor((Math.random() * 12) + 1);
+        console.log('this is purple' + purple);
+        //var blue = Math.floor((Math.random() * (12 - 1)) + 1);
+        //console.log('this is blue' + blue);
+        var red = Math.floor((Math.random() * 12) + 1);
+        console.log('this is red' + red);
+        var orange = Math.floor((Math.random() * 12) + 1);
+        console.log('this is orange' + orange);
+        var green = Math.floor((Math.random() * 12) + 1);
+        console.log('this is green' + green);
+        var yellow = Math.floor((Math.random() * 12) + 1);
+        console.log('this is yellow' + yellow);
+    
+    
 
-        $("#target-number").append(initialScore);
+        initialScore = Math.floor((Math.random() * (120 - 19)) + 19);
+
+        $("#target-number").html(initialScore);
 
         $("#purple").on("click", function () {
         
@@ -41,9 +84,12 @@ $(document).ready(function () {
             if (playerScore == initialScore) {
                 wins++;
                 alert('You Won!');
+                restart();
             } else {
                 if (playerScore > initialScore) {
-                alert('You Lose!');
+                    losses++;
+                    alert('You Lose!');
+                    restart();
                 }
             }
         })
@@ -57,9 +103,12 @@ $(document).ready(function () {
             if (playerScore == initialScore) {
                 wins++;
                 alert('You Won!');
+                restart();
             } else {
                 if (playerScore > initialScore) {
-                alert('You Lose!');
+                    losses++;
+                    alert('You Lose!');
+                    restart();
                 }
             }
         })
@@ -73,9 +122,12 @@ $(document).ready(function () {
             if (playerScore == initialScore) {
                 wins++;
                 alert('You Won!');
+                restart();
             } else {
                 if (playerScore > initialScore) {
-                alert('You Lose!');
+                    losses++;
+                    alert('You Lose!');
+                    restart();
                 }
             }
         })
@@ -89,9 +141,12 @@ $(document).ready(function () {
             if (playerScore == initialScore) {
                 wins++;
                 alert('You Won!');
+                restart();
             } else {
                 if (playerScore > initialScore) {
-                alert('You Lose!');
+                    losses++;
+                    alert('You Lose!');
+                    restart();
                 }
             }
         })
@@ -105,9 +160,12 @@ $(document).ready(function () {
             if (playerScore == initialScore) {
                 wins++;
                 alert('You Won!');
+                restart();
             } else {
                 if (playerScore > initialScore) {
-                alert('You Lose!');
+                    losses++;
+                    alert('You Lose!');
+                    restart();
                 }
             }
         })
