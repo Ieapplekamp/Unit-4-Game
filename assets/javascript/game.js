@@ -157,7 +157,8 @@ $(document).ready(function () {
             green = Math.floor((Math.random() * 12) + 1);
             initialScore = Math.floor((Math.random() * (120 - 19)) + 19);
             $("#target-number").html(initialScore);
-            return playerScore = 0; 
+            $("#player-score").html(0);
+            return playerScore = 0;
         }
 
     }
