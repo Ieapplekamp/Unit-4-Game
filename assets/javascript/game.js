@@ -8,11 +8,11 @@ $(document).ready(function () {
     function start() {
         
         purple = Math.floor((Math.random() * 12) + 1);
-        blue = Math.floor((Math.random() * 2) + 1);
+        yellow = Math.floor((Math.random() * 2) + 1);
         red = Math.floor((Math.random() * 12) + 1);
         orange = Math.floor((Math.random() * 12) + 1);
         green = Math.floor((Math.random() * 12) + 1);
-        yellow = Math.floor((Math.random() * 12) + 1);
+        blue = Math.floor((Math.random() * 12) + 1);
         
     
 
@@ -23,116 +23,51 @@ $(document).ready(function () {
         $("#purple").on("click", function () {
         
             playerScore += purple;
-            
             $("#player-score").html(playerScore);
-            if (playerScore === initialScore) {
-                wins++;
-                $("#wins").html(wins);
-                alert("You Won!");
-                restart();
-            } else {
-                if (playerScore > initialScore) {
-                    losses++;
-                    $("#losses").html(losses);
-                    alert("You Lost!");
-                    restart();
-                }
-            }
+            condtionals();
 
         })
 
-        $("#yellow").on("click", function () {
+        $("#blue").on("click", function () {
         
-            playerScore += yellow;
-
+            playerScore += blue;
             $("#player-score").html(playerScore);
-            if (playerScore === initialScore) {
-                wins++;
-                $("#wins").html(wins);
-                alert("You Won!");
-                restart();
-            } else {
-                if (playerScore > initialScore) {
-                    losses++;
-                    $("#losses").html(losses);
-                    alert("You Lost!");
-                    restart();
-                }
-            }
+            condtionals();
 
         })
 
         $("#red").on("click", function () {
         
             playerScore += red;
-
             $("#player-score").html(playerScore);
-            if (playerScore === initialScore) {
-                wins++;
-                $("#wins").html(wins);
-                alert("You Won!");
-                restart();
-            } else {
-                if (playerScore > initialScore) {
-                    losses++;
-                    $("#losses").html(losses);
-                    alert("You Lost!");
-                    restart();
-                }
-            }
+            condtionals();
 
         })
 
         $("#orange").on("click", function () {
    
             playerScore += orange;
-
             $("#player-score").html(playerScore);
-            if (playerScore === initialScore) {
-                wins++;
-                $("#wins").html(wins);
-                alert("You Won!");
-                restart();
-            } else {
-                if (playerScore > initialScore) {
-                    losses++;
-                    $("#losses").html(losses);
-                    alert("You Lost!");
-                    restart();
-                }
-            }
+            condtionals();
 
         })
 
         $("#green").on("click", function () {
     
             playerScore -= green;
-
             $("#player-score").html(playerScore);
-            if (playerScore === initialScore) {
-                wins++;
-                $("#wins").html(wins);
-                alert("You Won!");
-                restart();
-            } else {
-                if (playerScore > initialScore) {
-                    losses++;
-                    $("#losses").html(losses);
-                    alert("You Lost!");
-                    restart();
-                }
-            }
+            condtionals();
 
         })
 
-        $("#blue").on("click", function () {
-            if (blue > 1) {
+        $("#yellow").on("click", function () {
+            if (yellow > 1) {
                 wins++;
                 $("#wins").html(wins);
                 alert("You Survived");
                 restart();
             } else {
-                if (blue < 2) {
+                if (yellow < 2) {
                     losses++;
                     $("#losses").html(losses);
                     alert("You're dead");
@@ -140,6 +75,22 @@ $(document).ready(function () {
                 }
             }
         })
+
+        function condtionals() {
+            if (playerScore === initialScore) {
+                wins++;
+                $("#wins").html(wins);
+                alert("You Won!");
+                restart();
+            } else {
+                if (playerScore > initialScore) {
+                    losses++;
+                    $("#losses").html(losses);
+                    alert("You Lost!");
+                    restart();
+                }
+            }
+        }
  
     }
 
