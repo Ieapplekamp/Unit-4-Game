@@ -4,22 +4,11 @@ $(document).ready(function () {
     var losses = 0;
     var initialScore = "";
     var playerScore = 0;
-    
-    //test idea - 6/10 shit started to work 
-    // var purple = Math.floor((Math.random() * 12) + 1);
-    // // //var blue = Math.floor((Math.random() * (12 - 1)) + 1);
-    // // //console.log('this is blue' + blue);
-    // var red = Math.floor((Math.random() * 12) + 1);
-    // var orange = Math.floor((Math.random() * 12) + 1);
-    // var green = Math.floor((Math.random() * 12) + 1);
-    // var yellow = Math.floor((Math.random() * 12) + 1);
-    // // initialScore = Math.floor((Math.random() * (120 - 19)) + 19);
 
     function start() {
         
         purple = Math.floor((Math.random() * 12) + 1);
-        // //var blue = Math.floor((Math.random() * (12 - 1)) + 1);
-        // //console.log('this is blue' + blue);
+        blue = Math.floor((Math.random() * 2) + 1);
         red = Math.floor((Math.random() * 12) + 1);
         orange = Math.floor((Math.random() * 12) + 1);
         green = Math.floor((Math.random() * 12) + 1);
@@ -135,12 +124,30 @@ $(document).ready(function () {
             }
 
         })
+
+        $("#blue").on("click", function () {
+            if (blue > 1) {
+                wins++;
+                $("#wins").html(wins);
+                alert("You Survived");
+                restart();
+            } else {
+                if (blue < 2) {
+                    losses++;
+                    $("#losses").html(losses);
+                    alert("You're dead");
+                    restart();
+                }
+            }
+        })
  
     }
 
     start();
 
     function restart() {
+
+        blue = Math.floor((Math.random() * 2) + 1);
 
         if (playerScore > 0) {
             purple = Math.floor((Math.random() * 12) + 1);
