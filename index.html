@@ -12,18 +12,38 @@
     <title>Crystal jQuery Game</title>
   </head>
   <body>
-    <h1>Power Gems!</h1>
+    <h1 id="header" class="text-center">Power Stones!</h1>
 
-    <h1>Target Number: <span id="target-number"></span></h1>
-    <h1>Player Score: <span id="player-score"></span></h1>
-    <h1>Wins: <span id="wins"></span></h1>
-    <h1>Losses: <span id="losses"></span></h1>
+    <div class="accordion" id="accordionExample">
+
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0 text-center">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Rules & Regulations
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              <strong>There will be no cheating, with that being said, no calculators!</strong><br><br>
+              To win the game is fairly straight forward, your objective is to match the target number. Failure to the reach the target number will results in a loss. Each stone will hold a random value, and only 4 of the 6 stones will positively impact your goal.<br><br> <strong>Note: </strong>There are two special stones! <br> <ul><li>One to correct mistakes</li><li>One to test your odds if all else fails</li></ul>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <h2>Target Number: <span id="target-number"></span></h2>
+    <h2>Player Score: <span id="player-score"></span></h2>
+    <br>
+    <h2>Wins: <span id="wins"></span></h2>
+    <h2>Losses: <span id="losses"></span></h2>
 
 
     <div class="container">
         <div class="row">
             <div class="col-sm"> 
-                <img id="purple" class="float-left stones" src="./assets/images/power.jpg">
+                <img id="purple" class="stones" src="./assets/images/power.jpg">
             </div>
             <div class="col-sm"> 
                 <img id="blue" class="stones" src="./assets/images/space.jpg">
@@ -39,29 +59,9 @@
             </div>
             <div class="col-sm"> 
                     <img id="yellow" class="stones" src="./assets/images/mind.jpg">
-                </div>
+            </div>
         </div>
     </div>
-<!--
-     Make shit look cute this time 
-    this should be in a box of sorts
-
-    Add some sort of game description (Maybe be fancy and throw that shit in a button (girl you need to look into bootstrap more)) 
-
-    a container to hold the initialScore    
-    a box to hold the wins and losses total     
-
-    at least four gems, each with their own box    
-
-    A container to hold the playerScore     
--->
-
-
-
-
-
-
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -71,7 +71,3 @@
     <script src="./assets/javascript/game.js" type="text/javascript"></script>
   </body>
 </html>
-
-
-
-
