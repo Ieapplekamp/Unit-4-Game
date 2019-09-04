@@ -1,25 +1,42 @@
 body {
-    background-image: url("../images/octavian-rosca-UfCYo7zHyY8-unsplash.jpg"), url("../images/background2..jpeg");
+    background-image: url("../images/background1.jpg");
     background-size: 100vh;
-    background-blend-mode: normal;
+    background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(221, 221, 221);
     cursor: pointer;
 }
+
 #header {
     padding-top: 2%;
     padding-bottom: 2%;
     background-image: linear-gradient(to bottom,rgba(118,50,70,.45), rgba(88, 40, 31, 0.2),rgba(71, 40, 100, 0));
 }
 
-img {
-    width: 125%;
-    height: 125%;
-    margin-right:5%;
+.scores {
+    margin-top: 25px;
+    margin-left: 2%;
+    margin-bottom: 4%;
 }
 
-.container {
-    padding-top: 6%;
+img {
+    float: left;
+    width: 23%;
+    padding-left: 4%;
+    margin-right: 1%;
+}
+
+.test-idea {
+    float: right;
+    margin-left: 25%;
+    padding-top: 40px;
+    margin-bottom: 2%;
+    padding-left: 1%;
+}
+
+.test-idea img {
+    width: 29.5%;
+    
 }
 
 .card {
@@ -40,10 +57,20 @@ img {
     text-decoration: underline;
 }
 
-@media (max-width: 991.98px) {
-    .img {
-        
-        height: 125px;
-        width: 125px;
+
+@media only screen and (max-width: 1000px) {
+    body {
+        background-image: url("../images/stupidfuckingmediaquery2.jpg")
+    }
+}
+@media only screen and (max-width: 500px) {
+    body {
+        background-image: url("../images/round5.jpg");
+    }
+    #header {
+        background-image: none;
+    }
+    .scores {
+        margin-bottom: 75px;
     }
 }
