@@ -91,8 +91,8 @@ $(document).ready(function () {
 
     function restart() {
 
-        yellow = Math.floor((Math.random() * 2) + 1);   // This is outside so it doesn't reset the entire code if a user decided to 
-                                                        // press the button a million times at the start instead of using it as a failsafe.
+        yellow = Math.floor((Math.random() * 2) + 1);   // This is outside so it doesn't reset the entire code if a user decided to press the button a million times at the start instead of using it as a failsafe.
+        
         if (playerScore > 0 || playerScore < -13) {     // It works, we love it, we aren't changing it
 
             purple = Math.floor((Math.random() * 12) + 1);
