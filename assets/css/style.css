@@ -47,6 +47,9 @@ img {
     background-color: transparent;
     border: none;
 }
+.card-header {
+    background-color: transparent;
+}
 .card-body {
     font-size: 1.2em;
     background-color: rgba(23, 18, 27, 0.8)
