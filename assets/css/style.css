@@ -45,6 +45,7 @@ img {
 .card {
     color: rgb(221, 221, 221);
     background-color: transparent;
+    border: none;
 }
 .card-body {
     font-size: 1.2em;
