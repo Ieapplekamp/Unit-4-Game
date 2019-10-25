@@ -174,4 +174,10 @@ img {
         width: 35%;
         margin-right: 0;
     }
+    .cardOne {
+        font-size: 22px;
+    }
+    .cardTwo {
+        font-size: 22px;
+    }
 }
