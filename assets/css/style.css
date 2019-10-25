@@ -113,7 +113,8 @@ img {
 }
 @media only screen and (max-width: 500px) {
     body {
-        background-image: url("../images/round5.jpg");
+        background-image: url("../images/bluebackground4.jpg");
+        color: #fff;
     }
     #header {
         background-image: none;
