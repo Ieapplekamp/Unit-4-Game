@@ -52,13 +52,21 @@ $(document).ready(function () {
             if (yellow > 1) {
                 wins++;
                 $("#wins").html(wins);
-                alert("You Survived");
+                swal("Congratulations!!", "You Survived!!!", "success",{
+                    buttons: "This Time..",
+                    timer: 10000,
+                });
+                // alert("You Survived");
                 restart();
             } else {
                 if (yellow < 2) {
                     losses++;
                     $("#losses").html(losses);
-                    alert("You're dead");
+                    // alert("You're dead");
+                    swal("Congratulations!!", "You Killed Yourself!!!", "error",{
+                        buttons: "Better Luck Next Time..",
+                        timer: 10000,
+                    });
                     restart();
                 }
             }
@@ -68,18 +76,30 @@ $(document).ready(function () {
             if (playerScore === initialScore) {
                 wins++;
                 $("#wins").html(wins);
-                alert("You Won!");
+                swal("Congratulations!!", "You Won!!!", "success",{
+                    buttons: "Do it faster next time..",
+                    timer: 5000,
+                });
+                // alert("You Won!");
                 restart();
             } else if (playerScore < -13) {
                 losses++;
                 $("#losses").html(losses);
-                alert("You went too far back, don't ignore the laws of physics..");
+                swal("You went too far back...", "Don't ignore the laws of physics", "error",{
+                    buttons: "Nerd",
+                    timer: 5000,
+                });
+                // alert("You went too far back, don't ignore the laws of physics..");
                 restart();
             } else {
                 if (playerScore > initialScore) {
                     losses++;
                     $("#losses").html(losses);
-                    alert("You Lost!");
+                    swal("You Lost!!", "We all suck sometimes..", "error",{
+                        buttons: "But do better..",
+                        timer: 5000,
+                    });
+                    // alert("You Lost!");
                     restart();
                 }
             }
