@@ -30,13 +30,30 @@
         </div>
     </div>
     <!-- Block for the total scores -->
-    <div class="scores">
-      <h2>Target Number: <span id="target-number"></span></h2>
-      <h2>Player Score: <span id="player-score"></span></h2>
-      <br>
-      <h2>Wins: <span id="wins"></span></h2>
-      <h2>Losses: <span id="losses"></span></h2>
+    <div class='specialCards'>
+      <div class="card-deck-wrapper">
+        <div class="card-deck">
+        
+        <!-- Target Number Card -->
+          <div class="card text-center tops cardOne">
+            <div class="card-header">Target Number:</div>
+            <div class="card-body">
+              <p class="card-text"><span id="target-number"></span></p>
+            </div>
+          </div>
+          
+          <!-- Scores Card -->
+          <div class="card text-center tops cardTwo">
+            <div class="card-header ">Wins  |  Current Score  |  Losses</div>
+            <div class="card-body">
+              <p class="card-text"><span id="wins"></span><span id="player-score"></span><span id="losses"></span></p>
+            </div>
+          </div>
+        
+        </div>
+      </div>
     </div>
+
     <!-- First Four images on the page  -->
     <img id="purple" src="./assets/images/power.jpg">
     <img id="blue" src="./assets/images/space.jpg">

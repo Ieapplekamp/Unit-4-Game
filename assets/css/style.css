@@ -42,25 +42,46 @@ img {
 
 
 /* override for bootstrap dropdown menu */
-.card {
+.accordion .card {
     color: rgb(221, 221, 221);
     background-color: transparent;
     border: none;
 }
-.card-header {
+.accordion .card-header {
     background-color: transparent;
 }
-.card-body {
+.accordion .card-body {
     font-size: 1.2em;
     background-color: rgba(23, 18, 27, 0.8)
 }
-.btn-link, .btn-link.focus, .btn-link:focus {
+.accordion .btn-link, .btn-link.focus, .btn-link:focus {
     text-decoration: none;
     color: rgb(221, 221, 221);
 }
-.btn-link:hover {
+.accordion .btn-link:hover {
     color: rgb(221, 221, 221);
     text-decoration: underline;
+}
+
+/* Cards for Wins/Losses/Scores */
+.specialCards .tops {
+    background-color: rgba(23, 18, 27, 0.8);
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.cardOne {
+    font-size: 2em;
+}
+.cardTwo{
+    font-size: 2em;
+}
+#wins {
+    padding-right: 32%;
+}
+#player-score {
+    padding-right: 32%;
 }
 
 /* Animation for Nav Bar */
@@ -102,6 +123,12 @@ img {
 }
 
 /* Media queries, mostly for aesthetics and mobile */
+@media only screen and (max-width: 1135px) {
+    .cardTwo {
+        font-size: 25px;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     body {
         background-image: url("../images/alright.jpg")
@@ -111,6 +138,22 @@ img {
     }
 
 }
+
+/* 902 and 737 are for card */
+@media only screen and (max-width: 902px) {
+    .cardTwo {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 737px) {
+    .cardOne {
+        font-size: 1em;
+    }
+    .cardTwo {
+        font-size: 16px;
+    }
+}
+
 @media only screen and (max-width: 500px) {
     body {
         background-image: url("../images/bluebackground4.jpg");
